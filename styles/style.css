@@ -308,7 +308,7 @@ footer {
     }
 
     .info-cards {
-        grid-template-columns: 1fr;
+        grid-template-columns: 345px;
         column-gap: 40px;
     }
 
