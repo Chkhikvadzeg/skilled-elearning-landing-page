@@ -1,0 +1,318 @@
+:root {
+    --clr-purple: #666CA3;
+    --clr-purpledark: #13183F;
+    --clr-grey: #83869A;
+    --clr-darkpink: #F74780;
+    --clr-pink: #FFA7C3;
+    --clr-white: #FFFFFF;
+    --clr-gradient-pink: linear-gradient(180deg, #FF6F48 0.04%, #F02AA6 100%);
+    --clr-gradient-purple: linear-gradient(180deg, #4851FF 0%, #F02AA6 99.92%);;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: linear-gradient(#FFFFFF, rgba(102, 108, 163, 0.1));
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 165px;
+}
+
+h1 {
+    font-size: 3.5rem;
+    line-height: 1.25;
+    font-weight: 800;
+    color: var(--clr-purpledark);
+}
+
+h2 {
+    font-size: 2.5rem;
+    line-height: 1.275;
+    color: var(--clr-purpledark);
+    font-weight: 800;
+}
+
+h3 {
+    font-size: 2rem;
+    line-height: 1.25;
+    color: var(--clr-purpledark);
+    font-weight: 800;
+}
+
+h4 {
+    font-size: 1.5rem;
+    line-height: 28px;
+    color: var(--clr-purpledark);
+    font-weight: 800;
+}
+
+.text-medium {
+    font-weight: 500;
+    color: var(--clr-grey);
+    font-size: 1.125rem;
+    line-height: 1.55;
+}
+
+body {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--clr-grey);
+    overflow-x: hidden;
+}
+
+.button {
+    padding: 14px 32px;
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.55;
+    color: var(--clr-white);
+    border-radius: 28px;
+    display: inline-block;
+    cursor: pointer;
+    width: fit-content;
+    text-decoration: none;
+
+}
+
+.button--purple {
+    background: var(--clr-purpledark);
+}
+
+.button--purple:hover {
+    background: var(--clr-purple);
+}
+
+.button--gradient-pink {
+    background: var(--clr-gradient-pink);
+}
+
+.button--gradient-pink:hover {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
+}
+
+.button--gradient-purple {
+    background: var(--clr-gradient-purple);
+}
+
+.button--gradient-purple:hover {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(180deg, #4851FF -54.32%, #F02AA6 100%);
+}
+
+/* HEADER */
+
+body::after {
+    content: url(../assets/image-hero-desktop.png);
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+header {
+    padding: 24px 0 170px;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* STARTER */
+
+.starter {
+    margin-bottom: 250px;
+}
+
+.starter__inner {
+    max-width: 457px;
+}
+
+.starter__inner .text-medium {
+    margin: 29px 0 40px;
+}
+
+.mobile-img {
+    display: none;
+    max-width: 70%;
+    min-width: 325px;
+    margin-top: 45px;
+    margin: 0 auto;
+}
+
+.mobile-img img {
+    width: 100%;
+}
+
+/* INFO */
+
+.info {
+    margin-bottom: 140px;
+}
+
+.info-cards {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 350px);
+    gap: 80px 30px;
+}
+
+.info-card {
+    border-radius: 15px;
+    background: var(--clr-white);
+    box-shadow: 0px 25px 50px rgba(6, 22, 141, 0.0442381);
+    padding: 64px 32px;
+    position: relative;
+}
+
+.info-card > img {
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+}
+
+.info-card:first-child {
+    background: linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
+}
+
+.info-card:first-child h3 {
+    color: var(--clr-white);
+}
+
+.info-card .text-medium {
+    margin: 24px 0;
+}
+
+.info-card-link {
+    color: var(--clr-darkpink);
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.75;
+    text-decoration: none;
+}
+
+.info-card-link:hover {
+    color: #FFA7C3;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 32px 165px;
+    background: var(--clr-purpledark);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 1300px) {
+    .container {
+        padding: 0 40px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        line-height: 1.25;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        line-height: 33px;
+    }
+
+    h4 {
+        font-size: 1.25rem;
+        line-height: 1.25;
+    }
+
+    .text-medium {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .button {
+        font-size: 1rem;
+    }
+
+    body::after {
+        content: url(../assets/image-hero-tablet.png);
+    }
+
+    .starter {
+        margin-bottom: 210px;
+    }
+
+    .starter__inner {
+        max-width: 400px;
+    }
+    
+    .starter__inner .text-medium {
+        margin: 25px 0;
+    }
+
+    .info {
+        margin-bottom: 85px;
+    }
+
+    .info-cards {
+        grid-template-columns: repeat(2, 340px) ;
+    }
+
+    .info-card {
+        padding: 56px 32px 32px 32px;
+    }
+
+    .info-card .text-medium {
+        margin: 16px 0 24px;
+    }
+
+    footer {
+        padding: 32px 40px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    body::after {
+        display: none;
+    }
+
+    header {
+        padding-bottom: 40px;
+    }
+    
+    .starter__inner {
+        max-width: 100%;
+    }
+
+    .mobile-img {
+        display: block;
+    }
+
+    .starter {
+        margin-bottom: 65px;
+    }
+
+    .info-cards {
+        grid-template-columns: 1fr;
+        column-gap: 40px;
+    }
+
+    .info-card:first-child {
+        padding: 24px 28px 32px;
+    }
+}
